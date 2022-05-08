@@ -405,10 +405,10 @@ class Environment;
     $display("%0d : Environemnt : Port 3 Address %h ",$time,`P3);
 
     @(posedge mem_intf.clk);
-    mem_intf.cb.mem_en <= 0;
-    mem_intf.cb.mem_rw <= 0;
-    mem_intf.cb.mem_addr <= 0;
-    mem_intf.cb.mem_data <= 0;
+    mem_intf.cb.mem_en <= 1'b0;
+    mem_intf.cb.mem_rw <= 1'b0;
+    mem_intf.cb.mem_addr <= 2'b0;
+    mem_intf.cb.mem_data <= 8'h00;
 
     $display("%0d : Environemnt : end of cfg_dut() method",$time);
   
